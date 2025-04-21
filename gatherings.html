@@ -8,20 +8,37 @@
 </head>
 <body>
   
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="members.html">Members</a>
-  <a href="gatherings.html">Gatherings</a>
-  <a href="news.html">News</a>
-  <a href="fishing.html">Fishing</a>
-  <a href="recipes.html">Recipes</a>
-  <a href="games.html">Games</a>
-  <a href="references.html">References</a>
+<nav class="navbar">
+  <div class="logo"><a href="index.html">Fork & Fly</a></div>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+  <div id="nav-links" class="nav-links">
+    <a href="about.html">About</a>
+    <a href="members.html">Members</a>
+    <a href="gatherings.html">Gatherings</a>
+    <a href="news.html">News</a>
+    <a href="fishing.html">Fishing</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="games.html">Games</a>
+    <a href="references.html">References</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("nav-links");
+    links.classList.toggle("active");
+  }
+</script>
 
   <div class="main">
-    <h1>Gatherings</h1><p>Details about past and upcoming gatherings.</p>
+    <h1>Gatherings</h1>
+<h2>Hunter Mountain</h2>
+<p><strong>Date:</strong> Thursday, October 16, 2025 – Sunday, October 19, 2025</p>
+<p><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=462+Little+Timber+Road,+Hunter,+NY+12442,+United+States" target="_blank">
+462 Little Timber Road, Hunter, NY 12442, United States</a></p>
+<p>Details about past and upcoming gatherings.</p>
   </div>
+  <footer>&copy; 2025 The Fork and Fly Society</footer>
 </body>
 </html>

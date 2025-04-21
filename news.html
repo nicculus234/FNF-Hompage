@@ -8,20 +8,37 @@
 </head>
 <body>
   
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="members.html">Members</a>
-  <a href="gatherings.html">Gatherings</a>
-  <a href="news.html">News</a>
-  <a href="fishing.html">Fishing</a>
-  <a href="recipes.html">Recipes</a>
-  <a href="games.html">Games</a>
-  <a href="references.html">References</a>
+<nav class="navbar">
+  <div class="logo"><a href="index.html">Fork & Fly</a></div>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+  <div id="nav-links" class="nav-links">
+    <a href="about.html">About</a>
+    <a href="members.html">Members</a>
+    <a href="gatherings.html">Gatherings</a>
+    <a href="news.html">News</a>
+    <a href="fishing.html">Fishing</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="games.html">Games</a>
+    <a href="references.html">References</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("nav-links");
+    links.classList.toggle("active");
+  }
+</script>
 
   <div class="main">
-    <h1>News</h1><p>Latest updates and stories from the Society.</p>
+    <h1>News</h1>
+<article>
+  <h2>Website Construction Begins</h2>
+  <p><em>April 20, 2025</em></p>
+  <p>We are excited to announce the initial stages of construction for the official Fork and Fly Society website. Stay tuned for updates, stories, and upcoming events!</p>
+</article>
   </div>
+  <footer>&copy; 2025 The Fork and Fly Society</footer>
 </body>
 </html>
