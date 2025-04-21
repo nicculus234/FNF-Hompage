@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+<nav class="navbar sticky">
+  <div class="logo"><a href="index.html">Fork & Fly</a></div>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+  <div id="nav-links" class="nav-links">
+    <a href="about.html">🏕️ About</a>
+    <a href="members.html">👥 Members</a>
+    <a href="gatherings.html">🗺️ Gatherings</a>
+    <a href="news.html">📰 News</a>
+    <a href="fishing.html">🎣 Fishing</a>
+    <a href="recipes.html">🍲 Recipes</a>
+    <a href="games.html">🎲 Games</a>
+    <a href="references.html">📚 References</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="contact.html">✉️ Contact</a>
+    <a href="timeline.html">🕰️ Timeline</a>
+  </div>
+</nav>
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("nav-links");
+    links.classList.toggle("active");
+  }
+
+  window.onscroll = function() {
+    const btn = document.getElementById("topBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+<button onclick="topFunction()" id="topBtn" title="Back to top">⬆️</button>
+
+  <div class="main">
+    
+<h1>Timeline of Past Trips</h1>
+<ul>
+  <li><strong>1985:</strong> Founding trip at Beaverkill Campground</li>
+  <li><strong>1992:</strong> Big Catch Challenge at Housatonic Meadows</li>
+  <li><strong>2005:</strong> Stormy Summit at Macedonia State Park</li>
+  <li><strong>2018:</strong> 100th Catch Celebration</li>
+  <li><strong>2025:</strong> Hunter Mountain Gathering</li>
+</ul>
+
+  </div>
+  <footer>&copy; 1985 The Fork and Fly Society</footer>
+</body>
+</html>
