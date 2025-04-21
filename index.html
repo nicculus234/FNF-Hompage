@@ -8,20 +8,21 @@
 </head>
 <body>
   
-<nav class="navbar">
+<nav class="navbar sticky">
   <div class="logo"><a href="index.html">Fork & Fly</a></div>
   <button class="burger" onclick="toggleMenu()">☰</button>
   <div id="nav-links" class="nav-links">
-    <a href="about.html">About</a>
-    <a href="members.html">Members</a>
-    <a href="gatherings.html">Gatherings</a>
-    <a href="news.html">News</a>
-    <a href="fishing.html">Fishing</a>
-    <a href="recipes.html">Recipes</a>
-    <a href="games.html">Games</a>
-    <a href="references.html">References</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+    <a href="about.html">🏕️ About</a>
+    <a href="members.html">👥 Members</a>
+    <a href="gatherings.html">🗺️ Gatherings</a>
+    <a href="news.html">📰 News</a>
+    <a href="fishing.html">🎣 Fishing</a>
+    <a href="recipes.html">🍲 Recipes</a>
+    <a href="games.html">🎲 Games</a>
+    <a href="references.html">📚 References</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="contact.html">✉️ Contact</a>
+    <a href="timeline.html">🕰️ Timeline</a>
   </div>
 </nav>
 <script>
@@ -29,15 +30,30 @@
     const links = document.getElementById("nav-links");
     links.classList.toggle("active");
   }
+
+  window.onscroll = function() {
+    const btn = document.getElementById("topBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
+<button onclick="topFunction()" id="topBtn" title="Back to top">⬆️</button>
 
   <div class="main">
-<img src="favicon.png" alt="Fork and Fly Logo" style="max-width:400px; width:80%; margin-bottom: 20px;" />
     
-    <div style="text-align:center;">
-      <p><strong>Welcome to the official site of the Fork and Fly Society.</strong></p>
-    </div>
-    
+<div style="text-align:center;">
+  <img src="favicon.png" alt="Fork and Fly Logo" style="max-width:400px; width:80%; margin-bottom: 20px;" />
+  <h1>Welcome to the Fork and Fly Society</h1>
+  <p>Where tradition, trout, and taste come together since 1985.</p>
+</div>
+
   </div>
   <footer>&copy; 1985 The Fork and Fly Society</footer>
 </body>
