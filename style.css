@@ -1,41 +1,64 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Work+Sans:wght@400;600&display=swap');
 
 body {
   font-family: 'Cormorant Garamond', serif;
-  background-color: #fdfcf8;
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-color: #f9f8f3;
   color: #2e2e2e;
   margin: 0;
   padding: 0;
   line-height: 1.7;
 }
 
-nav {
+.navbar {
   background-color: #3a4b3c;
-  text-align: center;
-  padding: 14px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-nav a {
-  color: #fdfcf8;
-  margin: 0 12px;
+.navbar .logo a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 17px;
-  letter-spacing: 0.5px;
+  font-size: 16px;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #c8e6c9;
   text-decoration: underline;
+}
+
+.burger {
+  font-size: 22px;
+  color: white;
+  background: none;
+  border: none;
+  display: none;
 }
 
 .main {
   max-width: 860px;
   margin: 40px auto;
   padding: 30px;
-  background-color: #fffef9;
+  background-color: rgba(255,255,255,0.95);
   box-shadow: 0 4px 10px rgba(0,0,0,0.07);
   border-radius: 8px;
   border: 1px solid #ddd;
@@ -54,14 +77,27 @@ p {
   color: #444;
 }
 
-/* Responsive Design */
+footer {
+  background-color: #3a4b3c;
+  color: #eee;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
 @media (max-width: 768px) {
-  nav a {
+  .burger {
     display: block;
-    margin: 10px 0;
   }
-  .main {
-    margin: 20px;
-    padding: 20px;
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .nav-links.active {
+    display: flex;
   }
 }
